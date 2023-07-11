@@ -5,6 +5,7 @@ import Carousels from './Components/Carousels/Carousels';
 import Abouts from './Components/Abouts/Abouts';
 import Services from './Components/Services/Services';
 import Works from './Components/Works/Works';
+import Teams from './Components/Teams/Teams';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Abouts/>
         <Services/>
         <Works/>
+        <Teams/>
       </main>
     </div>
   );
