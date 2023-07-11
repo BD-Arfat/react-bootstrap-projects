@@ -1,16 +1,113 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Pagination, Row } from 'react-bootstrap';
+
+const worksData = [
+    {
+      id: 1,
+      link: '#',
+      image: require('../../assets/images/img2.jpg'),
+      title: 'Lonely Path',
+      subtitle: 'Web Design'
+    },
+    {
+      id: 2,
+      link: '#',
+      image: require('../../assets/images/img3.jpg'),
+      title: 'Photographer Girl',
+      subtitle: 'Branding'
+    },
+    {
+      id: 3,
+      link: '#',
+      image: require('../../assets/images/img4.jpg'),
+      title: 'The Difference',
+      subtitle: 'Web Design'
+    },
+    {
+      id: 4,
+      link: '#',
+      image: require('../../assets/images/img5.jpg'),
+      title: 'Nature Patterns',
+      subtitle: 'Branding'
+    },
+    {
+      id: 5,
+      link: '#',
+      image: require('../../assets/images/img6.jpg'),
+      title: 'The Difference',
+      subtitle: 'Photography'
+    },
+    {
+      id: 6,
+      link: '#',
+      image: require('../../assets/images/img7.jpg'),
+      title: 'Winter Sonata',
+      subtitle: 'Web Design'
+    },
+    {
+      id: 7,
+      link: '#',
+      image: require('../../assets/images/img8.jpg'),
+      title: 'Lonely Path',
+      subtitle: 'Branding'
+    },
+    {
+      id: 8,
+      link: '#',
+      image: require('../../assets/images/img9.jpg'),
+      title: 'Appreciation',
+      subtitle: 'Photography'
+    },
+    {
+      id: 9,
+      link: '#',
+      image: require('../../assets/images/img2.jpg'),
+      title: 'Happy Days',
+      subtitle: 'Web Design'
+    }
+  ]
+  
+  let active = 2;
+  let items = [];
+  for (let number = 1; number <= 5; number++) {
+    items.push(
+      <Pagination.Item key={number} active={number === active}>
+        {number}
+      </Pagination.Item>,
+    );
+  }
 
 const Works = () => {
     return (
-        <div id='works' className='block works-block'>
-            <Container fluid>
-                <Row>
-                    <Col>1 of 1</Col>
-                </Row>
-            </Container>
-        </div>
-    );
+        <section id="works" className="block works-block">
+          <Container fluid>
+            <div className="title-holder">
+              <h2>Our works</h2>
+              <div className="subtitle">our awesome works</div>
+            </div>
+            <Row className='portfoliolist'>
+              {
+                worksData.map(works => {
+                  return (
+                    <Col sm={4} key={works.id}>
+                      <div className='portfolio-wrapper'>
+                        <a href={works.link}>
+                          <img src={works.image} alt="" />
+                          <div className='label text-center'>
+                            <h3>{works.title}</h3>
+                            <p>{works.subtitle}</p>
+                          </div>
+                        </a>
+                      </div>
+                    </Col>
+                  );
+                })
+              }
+            </Row>
+            <Pagination>{items}</Pagination>
+          </Container>  
+        </section>
+      );
 };
 
 export default Works;
