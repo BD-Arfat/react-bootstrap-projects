@@ -9,9 +9,9 @@ import img1 from '../../assets/images/img1.jpg';
 
 const Abouts = () => {
 
-    const html = 80;
+    const html = 90;
     const responsive = 95;
-    const photoshop = 60;
+    const photoshop = 90;
 
     return (
         <section id="about" className="block about-block">
@@ -36,7 +36,7 @@ const Abouts = () => {
                             <ProgressBar now={responsive} label={`${responsive}%`} />
                         </div>
                         <div className='progress-block'>
-                            <h4>Photoshop</h4>
+                            <h4>Mern Stack</h4>
                             <ProgressBar now={photoshop} label={`${photoshop}%`} />
                         </div>
                     </Col>

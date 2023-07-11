@@ -3,6 +3,8 @@ import Headers from './Components/Headers/Headers';
 import './App.css';
 import Carousels from './Components/Carousels/Carousels';
 import Abouts from './Components/Abouts/Abouts';
+import Services from './Components/Services/Services';
+import Works from './Components/Works/Works';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <main>
         <Carousels />
         <Abouts/>
+        <Services/>
+        <Works/>
       </main>
     </div>
   );
